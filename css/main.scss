@@ -1,0 +1,109 @@
+//VARIABLES
+    $button-color: #2b2b2b;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.container {
+    display: grid;
+    place-content: center;
+    padding: 2em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        height: 2.1em;
+    }
+    .settings-icon {
+        height: 1em;
+    }
+}
+
+.greeting {
+    margin: 2em 0;
+    h1 {
+        font-size: 3em;
+        width: 60vw;
+        line-height: 1.2;
+    }
+    .name {
+        color: #6495ed;
+    }
+}
+
+.input-field {
+    #text-input {
+        font-size: 16px;
+        font-size: max(16px, 1em);
+        font-family: inherit;
+        padding: 0.25em 0.5em;
+        background-color: #fff;
+        border: 2px solid ghostwhite;
+        border-radius: 4px;
+    }
+}
+
+.buttons {
+    margin: 1.5em 0;
+
+    button {
+        font-size: .9em;
+        padding: .4em 1.9em;
+        text-transform: capitalize;
+        font-weight: 400;
+        font-family: inherit;
+        color: #fff;
+        border: none;
+        border-radius: .3em;
+        cursor: pointer;
+    }
+
+    #add-item {
+        background-color: $button-color;
+    }
+    #clear-all {
+        background-color: transparent;
+        border: 1px solid $button-color;
+    }
+}
+
+.task-group {
+    .name {
+        display: flex;
+        gap: .5;
+    }
+}
+
+.task-list {
+    .item {
+        list-style: none;
+    }
+    .check {
+        display: flex;
+        gap: .8em;
+    }
+
+    p {
+        font-size: .97em;
+        color: burlywood;
+    }
+}

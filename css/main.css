@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  padding: 2em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  height: 2.1em;
+}
+nav .settings-icon {
+  height: 1em;
+}
+
+.greeting {
+  margin: 2em 0;
+}
+.greeting h1 {
+  font-size: 3em;
+  width: 60vw;
+  line-height: 1.2;
+}
+.greeting .name {
+  color: #6495ed;
+}
+
+.input-field #text-input {
+  font-size: 16px;
+  font-size: max(16px, 1em);
+  font-family: inherit;
+  padding: 0.25em 0.5em;
+  background-color: #fff;
+  border: 2px solid ghostwhite;
+  border-radius: 4px;
+}
+
+.buttons {
+  margin: 1.5em 0;
+}
+.buttons button {
+  font-size: 0.9em;
+  padding: 0.4em 1.9em;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-family: inherit;
+  color: #fff;
+  border: none;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+.buttons #add-item {
+  background-color: #2b2b2b;
+}
+.buttons #clear-all {
+  background-color: transparent;
+  border: 1px solid #2b2b2b;
+}
+
+.task-group .name {
+  display: flex;
+  gap: 0.5;
+}
+
+.task-list .item {
+  list-style: none;
+}
+.task-list .check {
+  display: flex;
+  gap: 0.8em;
+}
+.task-list p {
+  font-size: 0.97em;
+  color: burlywood;
+}/*# sourceMappingURL=main.css.map */

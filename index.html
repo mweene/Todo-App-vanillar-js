@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Todo App | vanilla js</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="./utils/logo.svg" alt="site logo" class="logo">
+            <img src="./utils/settings.svg" alt="settings-icon" class="settings-icon">
+        </nav>
+
+        <div class="greeting">
+            <h1>
+                Good Morning, 
+                <span class="name">Mweene Harry</span>
+            </h1>
+        </div>
+
+        <div class="input-field">
+            <input type="text" name="task-item" id="text-input">
+        </div>
+
+        <div class="buttons">
+            <button id="add-item">add task</button>
+            <button id="clear-all">clear all</button>
+        </div>
+
+        <div class="task">
+            <div class="task-group">
+                <div class="name">
+                    <img src="#" alt="icon" class="task-icon">
+                    <h2>Design</h2>
+                </div>
+                <i class="close-open"></i>
+            </div>
+
+            <ul class="task-list">
+                <li class="item">
+                    <div class="check">
+                        <input type="checkbox" class="status">
+                        <h3>implement new ui for the navbar</h3>
+                    </div>
+                    <p class="time">Wednesday, 12:30 AM</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+</html>
