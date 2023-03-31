@@ -14,12 +14,13 @@ body {
   background-color: #000;
   color: #fff;
   font-family: "IBM Plex Mono", monospace;
+  font-size: 1em;
 }
 
 .container {
   display: grid;
   place-content: center;
-  padding: 2em;
+  padding: 2.5em;
 }
 
 nav {
@@ -38,8 +39,8 @@ nav .settings-icon {
   margin: 2em 0;
 }
 .greeting h1 {
-  font-size: 3em;
-  width: 60vw;
+  font-size: 2.3em;
+  font-weight: 900;
   line-height: 1.2;
 }
 .greeting .name {
@@ -78,6 +79,34 @@ nav .settings-icon {
   border: 1px solid #2b2b2b;
 }
 
+.task {
+  background-color: #0d0d0d;
+  border-radius: 0.3em;
+}
+.task .header {
+  background-color: #151515;
+  padding: 0.5em 1em;
+  border-radius: 0.3em 0.3em 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.task .header .name {
+  display: flex;
+  gap: 0.5em;
+}
+.task .header .avatar {
+  height: 1.5em;
+}
+.task .header h2 {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+.task .header .arrow-down {
+  height: 0.8em;
+  cursor: pointer;
+}
+
 .task-group .name {
   display: flex;
   gap: 0.5;
@@ -89,8 +118,19 @@ nav .settings-icon {
 .task-list .check {
   display: flex;
   gap: 0.8em;
+  padding: 1em;
+}
+.task-list .check .status {
+  align-self: flex-start;
+  height: 1.8em;
+}
+.task-list h3 {
+  font-size: 1em;
+  font-weight: 400;
+  color: #b9b7b7;
 }
 .task-list p {
-  font-size: 0.97em;
-  color: burlywood;
+  font-size: 0.8em;
+  margin-top: 0.5em;
+  color: tomato;
 }/*# sourceMappingURL=main.css.map */

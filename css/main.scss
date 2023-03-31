@@ -17,12 +17,13 @@ body {
     background-color: #000;
     color: #fff;
     font-family: 'IBM Plex Mono', monospace;
+    font-size: 1em;
 }
 
 .container {
     display: grid;
     place-content: center;
-    padding: 2em;
+    padding: 2.5em;
 }
 
 nav {
@@ -41,8 +42,8 @@ nav {
 .greeting {
     margin: 2em 0;
     h1 {
-        font-size: 3em;
-        width: 60vw;
+        font-size: 2.3em;
+        font-weight: 900;
         line-height: 1.2;
     }
     .name {
@@ -86,6 +87,39 @@ nav {
     }
 }
 
+.task {
+    background-color: #0d0d0d;
+    border-radius: .3em;
+
+    .header {
+        background-color: #151515;
+        padding: .5em 1em;
+        border-radius: .3em .3em 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .name {
+            display: flex;
+            gap: .5em;
+        }
+
+        .avatar {
+            height: 1.5em;
+        }
+
+        h2 {
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .arrow-down {
+            height: .8em;
+            cursor: pointer;
+        }
+    }
+}
+
 .task-group {
     .name {
         display: flex;
@@ -100,10 +134,23 @@ nav {
     .check {
         display: flex;
         gap: .8em;
+        padding: 1em;
+
+        .status {
+            align-self: flex-start;
+            height: 1.8em;
+          }
+    }
+
+    h3 {
+        font-size: 1em;
+        font-weight: 400;
+        color: #b9b7b7;
     }
 
     p {
-        font-size: .97em;
-        color: burlywood;
+        font-size: .8em;
+        margin-top: .5em;
+        color: tomato;
     }
 }
