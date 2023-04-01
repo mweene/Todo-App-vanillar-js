@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <title>Todo App | vanilla js</title>
 </head>
@@ -26,7 +25,7 @@
         </div>
 
         <div class="input-field">
-            <input type="text" name="task-item" id="text-input">
+            <input type="text" name="task-item" id="text-input" placeholder="Write your task...">
         </div>
 
         <div class="buttons">
@@ -46,7 +45,7 @@
             <ul class="task-list">
                 <li class="item">
                     <div class="check">
-                        <input type="checkbox" class="status">
+                        <input type="checkbox" class="status" id="checkbox">
                         <div class="text">
                             <h3>implement new ui for the navbar</h3>
                             <p class="time">Wednesday, 12:30 AM</p>
