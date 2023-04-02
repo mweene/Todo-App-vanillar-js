@@ -69,11 +69,11 @@ nav {
 
     button {
         font-size: .9em;
-        padding: .4em 1.9em;
-        text-transform: capitalize;
         font-weight: 400;
         font-family: inherit;
+        text-transform: capitalize;
         color: #fff;
+        padding: .4em 1.9em;
         border: none;
         border-radius: .3em;
         cursor: pointer;
@@ -155,3 +155,9 @@ nav {
         color: tomato;
     }
 }
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+//MEDIA QUERIES
