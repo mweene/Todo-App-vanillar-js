@@ -5,8 +5,12 @@ const addTask = document.getElementById("add-item");
 const clearAll = document.getElementById("clear-all");
 //const checkBox = document.getElementById("checkbox");
 const list = document.querySelector(".task-list");
+const textInput = document.getElementById('text-input');
+
+
 
 const createTaskItem = function() {
+
     const li = document.createElement('li');
     const div = document.createElement('div');
     const input = document.createElement('input');
@@ -21,7 +25,7 @@ const createTaskItem = function() {
     input.classList.add('checkbox');
     innerDiv.classList.add('text');
 
-    h3.innerText = 'Learning some Vanilla JS.';
+    h3.innerText = textInput.value;
     p.innerText = 'Thursday, 05:22 AM';
 
     li.appendChild(div);
