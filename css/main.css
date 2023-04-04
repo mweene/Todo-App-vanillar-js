@@ -21,13 +21,14 @@ body {
   display: grid;
   place-content: center;
   padding: 2.5em;
+  z-index: 1;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #2f2f2f;
+  border-bottom: 1.7px solid rgba(255, 255, 255, 0.2117647059);
   padding-bottom: 1em;
 }
 nav .logo {
@@ -35,6 +36,7 @@ nav .logo {
 }
 nav .settings-icon {
   height: 1em;
+  cursor: pointer;
 }
 
 .greeting {
@@ -42,34 +44,35 @@ nav .settings-icon {
   margin-top: 4.5em;
 }
 .greeting h1 {
-  font-size: 2.3em;
+  font-size: 4em;
   font-weight: 900;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 .greeting .name {
-  color: #6495ed;
+  color: orange;
 }
 
 .input-field #text-input {
-  font-size: max(16px, 1em);
+  font-size: max(16px, 1.1em);
   font-family: inherit;
   color: #0d0d0d;
-  padding: 0.25em 0.5em;
+  padding: 0.2em 0.5em;
   background-color: #fff;
   border: 2px solid ghostwhite;
   border-radius: 4px;
+  width: 40%;
 }
 
 .buttons {
-  margin: 1.5em 0;
+  margin: 1.1em 0 2.7em 0;
 }
 .buttons button {
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 400;
   font-family: inherit;
   text-transform: capitalize;
   color: #fff;
-  padding: 0.4em 1.9em;
+  padding: 0.4em 2em;
   border: none;
   border-radius: 0.3em;
   cursor: pointer;
@@ -79,15 +82,22 @@ nav .settings-icon {
 }
 .buttons #clear-all {
   background-color: transparent;
-  border: 1px solid #2b2b2b;
+  border: 1px solid rgba(255, 255, 255, 0.354);
 }
 
 .task {
-  background-color: #0d0d0d;
+  /* From https://css.glass */
+  background: rgba(66, 66, 66, 0.28);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(5.6px);
+          backdrop-filter: blur(5.6px);
+  border: 1px solid rgba(255, 255, 255, 0.17);
   border-radius: 0.3em;
 }
 .task .header {
-  background-color: #151515;
+  /* From https://css.glass */
+  background: rgba(11, 36, 51, 0.178);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.31);
   padding: 0.5em 1em;
   border-radius: 0.3em 0.3em 0 0;
   display: flex;
@@ -99,14 +109,14 @@ nav .settings-icon {
   gap: 0.5em;
 }
 .task .header .avatar {
-  height: 1.5em;
+  height: 1.7em;
 }
 .task .header h2 {
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: 500;
 }
 .task .header .arrow-down {
-  height: 0.8em;
+  height: 0.86em;
   cursor: pointer;
 }
 
@@ -128,12 +138,12 @@ nav .settings-icon {
   height: 1.8em;
 }
 .task-list h3 {
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: 400;
-  color: #b9b7b7;
+  color: #fff;
 }
 .task-list p {
-  font-size: 0.8em;
+  font-size: 0.9em;
   margin-top: 0.5em;
   color: tomato;
 }
@@ -142,6 +152,59 @@ nav .settings-icon {
   text-decoration: line-through;
 }
 
+.gradient-blobs {
+  z-index: -1;
+}
+.gradient-blobs .blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(5em);
+  z-index: -1;
+  opacity: 0.57;
+}
+.gradient-blobs .blob1 {
+  background: linear-gradient(90deg, #3f2b96 0%, #a8c0ff 100%);
+  padding: 17em;
+  margin-right: 10em;
+  top: 0;
+  right: 0;
+  filter: blur(10em);
+}
+.gradient-blobs .blob2 {
+  background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+  top: 0;
+  left: 0;
+  padding: 11em;
+  filter: blur(16.3em);
+}
+.gradient-blobs .blob3 {
+  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+  bottom: 0;
+  right: 0;
+  padding: 4em;
+}
+.gradient-blobs .blob4 {
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+  bottom: 0;
+  left: 0;
+  padding: 3em;
+}
+
+.settings-icon:hover {
+  animation-duration: 2000ms;
+  animation-name: spin;
+  animation-timing-function: linear;
+  animation-iteration-count: 3;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .item {
   animation-duration: 3s;
   animation-name: slidein;
